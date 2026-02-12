@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Efe’ye</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Georgia", serif;
+    }
+
+    body {
+      margin: 0;
+      background: #0f172a;
+      color: #e5e7eb;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .screen {
+      display: none;
+      padding: 20px;
+      max-width: 600px;
+      cursor: pointer;
+      animation: fadeIn 1s ease;
+    }
+
+    .active {
+      display: block;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #22c55e;
+      border: none;
+      color: #022c22;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .envelope {
+      font-size: 4rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    
+    }
+
+input {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  margin: 8px 0;
+  width: 80%;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #22c55e;
+}
+.letter {
+  max-height: 60vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  line-height: 1.6;
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Kaydırma çubuğunu tatlı yapalım */
+.letter::-webkit-scrollbar {
+  width: 6px;
+}
+
+.letter::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border-radius: 10px;
+}
+
+
+/* Yavaş görünme efekti */
+.fade-letter {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: letterFade 2s ease forwards;
+}
+
+/* Arka planı karartma */
+
+/* Animasyonlar */
+@keyframes letterFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+
+/* Scroll çubuğu tatlılığı */
+.letter::-webkit-scrollbar {
+  width: 6px;
+}
+
+.letter::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border-radius: 10px;
+}
+
+.love-glow {
+  color: #f9fafb;
+  font-weight: 600;
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.6),
+    0 0 12px rgba(255, 255, 255, 0.4),
+    0 0 20px rgba(255, 255, 255, 0.2);
+  animation: lovePulse 2.5s ease-in-out infinite;
+}
+
+@keyframes lovePulse {
+  0% {
+    text-shadow:
+      0 0 6px rgba(255, 255, 255, 0.4),
+      0 0 12px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    text-shadow:
+      0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 30px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    text-shadow:
+      0 0 6px rgba(255, 255, 255, 0.4),
+      0 0 12px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.love-photo {
+  width: 180px !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 15px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.letter {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- 1. Hoş geldin -->
+  <div class="screen active" onclick="nextScreen()">
+    <h1>BAL PORSUĞUM</h1>
+  </div>
+
+  <div class="screen" onclick="nextScreen()">
+    <p>ÖNCELİKLE</p>
+    <h1>SENİ COK SEVİYORUM</h1>
+  </div>
+
+  <div class="screen" onclick="nextScreen()">
+    <p>bu bizim ilk sevgililer günümüz</p>
+    <p>cok güzeliz cicek gibi bahar gibi</p>
+    <p>iliskimz baharda başladı diye mi</p>
+    <p>bilmiyorum</p>
+    <p>mevsim olsa bahar olurdu</p>
+    <p>yeri gelince yağmurlu</p>
+    <p>yeri gelince güneşli</p>
+    <p>ama hep tatlı bi rüzgar eser</p>
+    <p>hep tatlıdır havası</p>
+    <p>bazen polen alerji yapsa da</p>
+    <p>senleyken o da keyifli</p>
+    <h2>sanirimcokasigim</h2>
+  </div>
+
+  <div class="screen" onclick="nextScreen()">
+    <h1>hep yanımda olduğun için teşekkür ederim sevgilim</h1>
+  </div>
+
+  <!-- 2. Hazır mısın -->
+  <div class="screen" onclick="nextScreen()">
+    <p>küçük ama sana böyle bir hediyem olsun istedim</p>
+    <p>(cok minik kod yazmayı ogrendim :3)</p>
+    <h1>HAZIRSAN BASLAYALIM O HALDEEE</h1>
+  </div>
+
+  <!-- 3. Bulmaca -->
+  <div class="screen">
+  <h1>Biraz düşün bakalım…</h1>
+
+  <p>En çok kullandığımız cümle?</p>
+  <input id="q1" placeholder="cevabı yaz" />
+
+  <p>İlk öptüğün yer?</p>
+  <input id="q2" placeholder="cevabı yaz" />
+
+  <p>Aşk hayvanımız?</p>
+  <input id="q3" placeholder="cevabı yaz" />
+
+  <p>En çok yediğimiz 3 yemek?</p>
+  <input id="q4" placeholder="cevabı yaz" />
+
+  <p>Seni en çok öptüğüm yer?(beylerbeyi hariiiccc)</p>
+  <input id="q5" placeholder="cevabı yaz" />
+
+  <br>
+  <button onclick="checkPuzzle()">Kontrol Et</button>
+  <p id="result"></p>
+</div>
+
+
+
+
+  <!-- 4. Mini test -->
+  <div class="screen" onclick="nextScreen()">
+    <h1>Aferin len</h1>
+    <p>Devam etmek ister misin?</p>
+    <button>EVET(baskasecenegnyokcnm;p)</button>
+  </div>
+
+  <!-- 5. Zarf -->
+  <div class="screen" onclick="nextScreen()">
+    <div class="envelope">💌</div>
+    <p>tıkla bakalım tontonum</p>
+  </div>
+
+  <!-- 6. Zarf içi -->
+ <div class="screen">
+  <h1>Efe,</h1>
+
+  <div class="letter fade-letter">
+
+  
+
+    <p>
+     
+
+Bazen düşünüyorum da…
+Ben seni ararken bulmadım. Demeyeceğim baya aradım iki yıl KLHEAFIOHAIPFH
+Ama hayatın cilvesidir belki; seni, hayatın tam ortasında, ben yorulmuşken buldum.
+Sanki sonsuz zamandır birlikteymisiz gibiydi.
+
+Yanındayken içimde garip bir sessizlik oluyor.
+Hani her şey yoluna girmiş gibi…Kafam daha temiz
+Kalbim ilk kez acele etmiyor.
+Elini tuttuğumda dünya durmuyor belki ama ben durabiliyorum.
+Ve bu bana çok iyi geliyor.
+
+Seni sevmek hem haykırmak benim için
+Hem de içten içe yayılan bir sıcaklık.
+Filler dans ederken aynı zamanda çiçekte açıyor
+Güneş vururken rüzgar da esiyor
+Sen varken hiçbir şey eksik hissettirmiyor.
+
+En çok da şuna şaşırıyorum:
+Benim karmaşık hâllerimi olduğu gibi seviyorsun.
+Suskunluğumu da, coşkumu da aynı yerden tutuyorsun.
+Kimseye açamadığım taraflarım, senin yanında kendiliğinden açılıyor.
+Bu çok kıymetli. Çok özel.
+Bu… bulunmuşluk hissi.
+
+Ben seninle güçlü hissediyorum Efe.
+Korkularım var elbet insanım ama yalnız değilim.
+Yanımda duruşun, her zaman buradayım deyişin
+bana dünyadaki en güvenli yere dönüşüyor.
+
+Bu Sevgililer Günü’nde sana şunu söylemek istiyorum:
+Ben seni seviyorum.
+Sessizce (bazen sesli), derinden (yüzeysel bile), uzun uzun (kısa olarakta).
+Ve iyi ki kalbim seni seçmiş.
+
+İyi ki varsın.
+İyi ki “biz” diye bir şey var.
+
+<span class="love-glow">Seni seviyorum.</span>
+
+    </p>
+
+    <img src="foto.jpg" class="love-foto" width="250">
+
+
+  </div>
+
+  <p style="opacity:0.6; font-size:0.9rem; text-align:center;">
+    aşağı kaydır 👇
+  </p>
+</div>
+
+
+
+<script>
+let current = 0;
+const screens = document.querySelectorAll(".screen");
+
+function nextScreen() {
+  if (current < screens.length - 1) {
+    screens[current].classList.remove("active");
+    current++;
+    screens[current].classList.add("active");
+  }
+}
+
+function checkPuzzle() {
+  const q1 = document.getElementById("q1").value.toLowerCase().trim();
+  const q2 = document.getElementById("q2").value.toLowerCase().trim();
+  const q3 = document.getElementById("q3").value.toLowerCase().trim();
+  const q4 = document.getElementById("q4").value.toLowerCase().trim();
+  const q5 = document.getElementById("q5").value.toLowerCase().trim();
+
+  const result = document.getElementById("result");
+
+  if (
+    (q1 === "seni çok seviyorum" || q1 === "sana çok aşığım") &&
+    q2 === "boyun" &&
+    q3 === "fil" &&
+    (q4 === "gözleme hamburger tavuk" || q4 === "gözleme hamburger çıtır tavuk") &&
+    q5 === "dudak"
+  ) {
+    result.innerText = "Hepsi doğru… seni çok seviyorum 💚";
+    setTimeout(nextScreen, 1200);
+  } else {
+    result.innerText = "Hmm… slk msn amk OEWOWDJWOPJDP  😌tekrar dene scrm bacagına";
+  }
+}
+</script>
+
+
+
+</body>
+</html>
